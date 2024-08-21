@@ -16,4 +16,12 @@ The project requirements are:
     * Saving and loading data: save customer and interaction data in a file (text or csv) and load it at startup.
     * User interface: the interface will be command-line based, with a main menu offering clear options for all necessary operations, ensuring a smooth and accessible user experience.
 
-# 1. INTRODUCTION
+## Data structures
+
+In order to create a rubust software we have to start to define the data structure we want to use. The requirements of the project give us a hint, since they describe like two different kind of information customers and their interactions with the insurance company.
+
+Hence, we create two different files, one to store customer information such as name and surname, the second to store customer interactions. The two files have a relationship through a key named `customer_ID`. In particular, the `customer_ID` is an unique identifier for each customer in the customers file, whereas in the interactions file we can have **n** occurrences of the `customer_ID`, where **n** depends on the number of interactions between the insurance company and the customer.
+
+### Customers
+
+### Interactions
