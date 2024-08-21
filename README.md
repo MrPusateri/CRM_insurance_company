@@ -15,3 +15,5 @@ The project requirements are:
     * Interaction management: add, view, and search interactions for each customer (interactions are defined as appointments by the sales force and contracts signed).
     * Saving and loading data: save customer and interaction data in a file (text or csv) and load it at startup.
     * User interface: the interface will be command-line based, with a main menu offering clear options for all necessary operations, ensuring a smooth and accessible user experience.
+
+# 1. INTRODUCTION
