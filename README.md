@@ -25,3 +25,11 @@ Hence, we create two different files, one to store customer information such as 
 ### Customers
 
 ### Interactions
+
+The interactions file is like a database table where store the interactions between customers and insurance company. The database layout is:
+* `CUSTOMER_ID`, it is the unique identifier for each customer in the customers database.
+* `INTERCTION_TYPE`, it is a string that represent the type of interaction stored by InsuraPro. The user can choose among 3 different kind of interaction type:
+    * APPOINTMENT, it is when the sales force contact a customer.
+    * QUOTE, it is when the customers ask for a quotation of the risk and the sales force give a quote, but the customer do not sign for it.
+    * SIGN, it is when the customer sign an insurance policy.
+* `PREMIUM`, it represent the amount of money (the currency depends on the state of the insurance company, I'm in Italy and so I will use euros). However, it is a flaoting point number. It will be valued only for QUOTE and SIGN
