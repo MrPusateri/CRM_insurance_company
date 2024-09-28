@@ -44,6 +44,7 @@ The interactions file is like a database table where store the interactions betw
     * `CAR`, car insurance.
     * `HEALTH`, health insurance.
     * `HOME`, property insurance.
+* **`INTERACTION_DATE`**, it represents the date of the interaction.
 * **`POLICY_ID`**, is an identifier of a client's underwritten policy. That ID can be useful if we implement other database with relevant information about policies.
 * **`QUOTES_ID`**, is an identifier of a client's quote. That ID can be useful if we implement other database with relevant information about quotes.
 
@@ -59,6 +60,9 @@ In the next sections I present the features of the InsuraPro's CRM.
 
 ### Adding a customer
 
+To add a new customer to the InsuraPro's CRM the user has to select the option add customer.
+
+After through the terminal the sofware ask some foundamental information that are NAME and SURNAME.
 
 ### Client display: display all clients present.
 
@@ -72,7 +76,7 @@ search for customers by first or last name.
 
 ### Interaction management
 
-add, view, and search interactions for each customer (interactions are defined as appointments by sales force and contracts signed).
+or each customer (interactions are defined as appointments by sales force and contracts signed).
 
 ### Saving and loading data
 
