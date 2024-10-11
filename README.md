@@ -56,19 +56,104 @@ Hence, the file **`next_customer_id.txt`** store the next value of the identifie
 
 ## Features
 
-In the next sections I present the features of the InsuraPro's CRM.
+In this sections I present the features of the InsuraPro's CRM and the user interface.
 
-### Adding a customer
+### User interface
 
-To add a new customer to the InsuraPro's CRM the user has to select the option add customer.
+The user interface is the standard terminal output where the user runs the application. Specifically, the following line must be executed to create the executable `CRM_INSURA_PRO`:
+```console
+g++ -std=c++17 -o ./CRM_INSURA_PRO ./main.cpp ./CustomerManager.cpp ./Customer.cpp ./my_functions.cpp ./Interaction.cpp ./InteractionManager.cpp
+```
 
-After through the terminal the sofware ask some foundamental information that are NAME and SURNAME.
+**Note that:** InsuraPro's CRM uses the C++17 standard in that it uses features such as `std::optional<...>` and `std::nullopt` to keep the code clearer and more maintainable.
 
-### Client display: display all clients present.
+There are two main methods the user has to interact with the application:
+* The application print in the terminal a list of possible action to execute, where the bullet points are integer number inside square brackets. The user has to insert the integer value related to action to execute.
 
-### Edit a client: edit the details of an existing client.
+    Example:
 
-### Deleting a customer: removing customers from CRM.
+    ```console
+    Enter the number in bracketsthat corresponds to the product related to the interaction:
+    [1] CAR.
+    [2] HEALTH.
+    [3] HOME.
+    You chose: 2
+    ```
+
+    In this example the interaction is related to a `HEALTH` product.
+* The application prints a question in the terminal and at the end there is a square bracket like `[y/n]` and the user has to enter a character `y` (yes) or 'n' (no) to express a decision.
+
+    Example:
+
+    ```console
+    It is correct?[y/n] y
+    ```
+
+A user in order to select a functionality of InsuraPro's CRM has to make a decision of the following menu:
+```console
+The possible actions are:
+ [1] Upload a CSV  file that  contains a  CRM  with the  same structure
+     presented in the documentation.
+ [2] Upload a CSV file that contains interactions with  customers  with
+     the same rules in the documentation.
+ [3] Add a customer.
+ [4] Display all the customers.
+ [5] Edit a customer.
+ [6] Delete a customer.
+ [7] Search a customer.
+ [8] Add a new interaction.
+ [9] Display all the interactions.
+[10] Search interactions of a customer.
+[11] Save CRM data.
+[12] Save interaction data.
+[13] Save all and exit.
+[14] Exit without saving.
+You chose:
+```
+
+Next sections present the different oprions.
+
+### Upload a CRM csv file
+
+The user has to insert the file path that points to a CSV file that has the same structure of the Customer table presented i this documentation.
+
+```console
+Insert the customers CSV file name: customers.csv
+```
+
+In this case the csv file is in the same folder of the executable.
+
+### Upload an interactions csv file
+
+The user has to insert the file path that points to a CSV file that has the same structure of the Interaction table presented i this documentation.
+
+```console
+Insert the interactions CSV file name: interactions.csv
+```
+
+In this case the csv file is in the same folder of the executable.
+
+### Add a customer
+
+To add a new customer to the InsuraPro's CRM the user has to select the option `[3] Add a customer.`. After the program starts to ask all the required information necessary for a customer:
+* name, the customer name.
+* surname, the customer surname.
+* birth day, the customer birth day in the format `DD/MM/YYYY`.
+* tax code, the customer tax code that has a different structure depending on the cuntry. It accept only letters and numbers.
+
+When the user ends to insert all the necessary information, the InsuraPro's CRM program shows the customer to add and ask to the user if it is correct or not `It is correct?[y/n] ` if the user say `y`, the program ask a new action to the user. Otherwise, ask if the user want to continue to add a new customer or not.
+
+### Display all customers
+
+The action `[4] Display all the customers.` shows on the terminal a table with all the customers in the customer manager.
+
+### Edit a customer
+
+The action `[5] Edit a customer.` allow the user to modify information related to a customer in the CRM. The user has to select the customer through the name or surname and select the specific customer using the `CUSTOMER_ID` associated. After, the user decided which information change and which not.
+
+### Delete a customer
+
+The action `[6] Delete a customer.` drives the user to delete a customer from the InsuraPro's CRM.
 
 ### Search for a customer
 
