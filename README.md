@@ -157,14 +157,24 @@ The action `[6] Delete a customer.` drives the user to delete a customer from th
 
 ### Search for a customer
 
-search for customers by first or last name.
+The action `[7] Search a customer.` drives the user to search a customer from the InsuraPro's CRM. It is possible to search a customer by full name or full surname.
 
-### Interaction management
+### Add an interaction
 
-or each customer (interactions are defined as appointments by sales force and contracts signed).
+The action `[8] Add a new interaction.` drives the user to insert a new interaction linked to a customer in the CRM. Depending on the interaction type the InsuraPro's CRM asks different information to insert.
 
-### Saving and loading data
+### Display interactions
 
-Customer and interaction data are stored in two separate CSV files, named `customers.csv` and `interactions.csv` respectively.
+The action `[9] Display all the interactions.` shows on the terminal a table with all the interactions in the CRM.
 
-### User interface
+### Search interactions of a customer
+
+The action `[10] Search interactions of a customer.` allows to search all the interactions linked to a specific customer that has to be search by the user using the full name or surname.
+
+### Saving data and exit
+
+The last possible actions are:
+* `[11] Save CRM data.`, the user has to specify a valid path to save the customer table.
+* `[12] Save interaction data.`, the user has to specify a valid path to save the interaction table.
+* `[13] Save all and exit.`, the user has to specify a valid path to save the customer and the interactions tables and after the program ends.
+* `[14] Exit without saving.`, the program ends without saving anything.
